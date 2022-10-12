@@ -1,0 +1,6 @@
+[submodule "fb-runner-node"]
+	path = fb-runner-node
+	url = https://github.com/ministryofjustice/fb-runner-node.git
+[submodule "fb-housing-disrepair-prototype"]
+	path = fb-housing-disrepair-prototype
+	url = https://github.com/ministryofjustice/fb-housing-disrepair-prototype.git
