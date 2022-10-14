@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   name: housing-disrepair
 spec:
-  replicas: 1
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -19,6 +18,8 @@ spec:
     spec:
       containers:
         - name: webapp
+          imagePullPolicy: Always
+          image: 754256621582.dkr.ecr.eu-west-2.amazonaws.com/central-digital-product-team/housing-disrepair-oss-staging-ecr:hd-add-kube-config-latest
           ports:
             - containerPort: 3000
-          command: ['docker run --rm -it -p 3000:3000 $(docker build -q .)']
+          command: ["node", "fb-runner-node/bin/start.js"]
