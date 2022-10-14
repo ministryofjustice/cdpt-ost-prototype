@@ -18,6 +18,6 @@ spec:
         pathType: ImplementationSpecific
         backend:
           service:
-            name: housing-disrepair
+            name: housing-disrepair-service
             port:
-              number: 4567
+              number: 3000

@@ -15,7 +15,7 @@ function _build() {
   component=hd
 
   region='eu-west-2'
-    aws_profile='ecr-staging-housing-disrepair-test'
+  aws_profile='ecr-staging-housing-disrepair-test'
 
   git_remote_url="https://github.com/ministryofjustice/cdpt-ost-prototype.git";
   docker_endpoint=754256621582.dkr.ecr.eu-west-2.amazonaws.com

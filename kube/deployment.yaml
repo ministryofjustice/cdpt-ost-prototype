@@ -22,4 +22,3 @@ spec:
           image: 754256621582.dkr.ecr.eu-west-2.amazonaws.com/central-digital-product-team/housing-disrepair-oss-staging-ecr:hd-add-kube-config-latest
           ports:
             - containerPort: 3000
-          command: ["node", "fb-runner-node/bin/start.js"]
