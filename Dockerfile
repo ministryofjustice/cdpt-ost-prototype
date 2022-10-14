@@ -1,8 +1,5 @@
 FROM node:14.5.0-alpine
 
-RUN addgroup --gid 1000 --system appgroup && \
-    adduser --uid 1000 --system appuser --ingroup appgroup
-
 RUN apk add git bash
 
 ARG UID=1001
@@ -17,7 +14,7 @@ RUN chown appuser:appgroup /fb-runner-node/app
 COPY --chown=appuser:appgroup fb-runner-node/package.json fb-runner-node/package-lock.json ./
 
 USER appuser
-USER 1000
+USER 1001
 
 ARG NPM_CMD='ci --ignore-optional --ignore-scripts'
 RUN npm ${NPM_CMD}
