@@ -10,9 +10,11 @@ WORKDIR /fb-runner-node/app
 
 RUN chown appuser:appgroup /fb-runner-node/app
 
-USER appuser
 
 COPY --chown=appuser:appgroup fb-runner-node/package.json fb-runner-node/package-lock.json ./
+
+USER appuser
+USER 1001
 
 ARG NPM_CMD='ci --ignore-optional --ignore-scripts'
 RUN npm ${NPM_CMD}
